@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<title>CustomerX.i</title>
+</head>
+<style>
+    
+.container{
+
+   
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+    
+}
+.container-2{
+    max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+
+}
+.btn{
+
+padding: 10px 20px;
+background-color: #08213C;
+color: white;
+text-decoration: none;
+border-radius: 20px;
+font-family: 'Montserrat', sans-serif;
+}
+.navbar{
+width: 100%;
+display: flex;
+justify-content: space-between;
+padding: 10px 10px;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+font-size: 15px;
+}
+.navbar-brand{
+margin-right: 40px;
+}
+.nav-item:last-child {
+margin-right: 0; /* Removes margin on the last item */
+}
+.navbar-nav {
+margin-left: auto;
+}
+.award-logo {
+            width: 150px; /* Adjust size as needed */
+            height: 150px; /* Adjust size as needed */
+            background-color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;}
+.award-text {
+            margin-top: 10px;
+            font-weight: bold;
+            font-family: 'Montserrat';
+            text-align: center;
+            display: block; /* Makes the element behave like a block, taking full width */
+            width: 100%;
+        }
+.button-row {
+            text-align: center;
+            margin-top: 20px;
+        }            
+.title{
+
+    font-family: 'Montserrat';
+}
+.service-card {
+    background: #f0f0f0;
+    border-radius: 0px;
+    padding: 20px;
+    margin-bottom: 40px;
+    transition: transform 0.3s;
+    font-family: 'Montserrat';
+    height: 500px;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+  }
+  .service-card h4{
+    font-weight: bold;
+
+  }
+  .service-card:hover {
+    transform: scale(1.05);
+  }
+  .icon-bg {
+    background: white;
+    border-radius: 50%;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  .icon {
+            width: 100px; /* Adjust icon size */
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .info-section {
+            padding: 20px;
+            
+            border-radius: 8px;
+            font-family: 'Montserrat';
+            
+            
+        }
+        .info-title {
+            font-size: 26px;
+            font-weight: bold;
+            font-family: 'Montserrat';
+        }
+        .info-text {
+            font-size: 15px;
+            font-family: 'Montserrat';
+        }  
+.tab-content img {
+   /* width: 50%;  Set the width to 100% of its container */
+    height: 200px;
+    width: 200px; /* Keep aspect ratio */
+    margin-bottom: 20px; /* Space between images */
+    margin-right: 28px;
+  }
+  .nav, .tab-content {
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: bold;
+    color: #08213C;
+  }
+  .logo-container {
+    display: grid; /* Using grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Creates a responsive grid */
+    gap: 20px; /* Space between grid items */
+  }
+
+footer {
+    background-color: #4295CD;
+    font-family: 'Montserrat';
+    background: linear-gradient(to top, #4295CD 60%, #fff 190%);
+}
+
+</style>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light" style="width: 100%;" style="background-color: #DBE2EF;">
+      <div class="container-fluid" >
+        <a class="navbar-brand" href="#" style="color: #DBE2EF;"  >
+          <img src="LOGO.png" alt="CustomerX.i" style="height: 50px; margin-left: 180px;" >                         
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" style="margin-right: 10px;">
+          <ul class="navbar-nav" style="margin-right: 10px;" >
+            <li class="nav-item" style="margin-left: 100px;">
+              <a class="nav-link dropdown-toggle" aria-expanded="false" id="navbarDropdownMenuLink" href="#" role="button" data-bs-toggle="dropdown" style="color: #000;">How it Works</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">How CustomerXi Works With Agencies</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: #000;">Why Customer X.i</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #000;">
+                Solutions
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="MenuLevelInsights.html">Menu-Level Insights (MLI™)</a></li>
+                <li><a class="dropdown-item" href="TotalMarketInsights.html">Total Market Insights (TMI™ )</a></li>
+                <li><a class="dropdown-item" href="CDI.html">Customer Demographic Insights (CDI™ )</a></li>
+                <li><a class="dropdown-item" href="CMI.html">Campaign Execution</a></li>
+                <li><a class="dropdown-item" href="ResMediaNet.html">Restaurant Media Network™</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: #000;">Plans</a>
+            </li>
+            <li class="nav-item" style="margin-right: 5px;">
+              <a class="nav-link" href="#" style="color: #000;" >About Us</a>
+            </li>
+          </ul>
+        </div>
+        <form class="d-flex">
+          <button class="btn" style="background-color: #08213C; color: white; margin-right: 8px;"  type="submit">Get Started</button>
+          <button class="btn" style="background-color: #DBE2EF; color: #000; margin-right: 80px;" type="submit">My Account</button>
+        </form>
+      </div>
+    </nav>
+    <br>
+    <br></br>
+    <div class="container">
+
+
+        <h2 class="title" style="margin-left: 100px; font-size: 40px;"><b>From Appetite to <span style="color: #4295CD;">Profit</span></b></h2> <br>
+        <p style="margin-left: 100px; font-size: 18px; font-family: Montserrat;">Industry's <b>#1</b> Restaurant Media Network™<br>
+            and First Restaurant Advertising Data Platform
+        </p>  
+    <video width="1200px" loop autoplay controls muted>
+        <source src="01_BigAnimation_highbirate.mp4" type="video/mp4">
+    </div>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col text-center mb-4">
+                <h2 style="font-size: 40px; margin-top: 15px; font-family: Montserrat;"><b>Awards</b></h2>
+                <p style="font-family: Montserrat;">The excellence of our services has been proved by the following awards:</p>
+            </div>
+        </div>
+        <div class="row text-center">
+            <!-- Each award item -->
+            <div class="col-md-3">
+                <div class="award-logo" style="margin-left: 65px;">
+                    <img src="path_to_google_logo" alt="Google">
+                </div>
+                <p class="award-text">Google</p>
+            </div>
+            <div class="col-md-3">
+                <div class="award-logo" style="margin-left: 65px;">
+                    <img src="path_to_microsoft_logo" alt="Microsoft">
+                </div>
+                <p class="award-text">Microsoft</p>
+            </div>
+            <div class="col-md-3">
+                <div class="award-logo" style="margin-left: 65px;">
+                    <img src="path_to_nestle_logo" alt="Nestle">
+                </div>
+                <p class="award-text">Nestle</p>
+            </div>
+            <div class="col-md-3">
+                <div class="award-logo" style="margin-left: 65px;">
+                    <img src="path_to_dallas_news_logo" alt="Dallas News">
+                </div>
+                <p class="award-text">Dallas News</p>
+            </div>
+        </div>
+        <div class="row button-row">
+            <div class="col-md-12">
+                <br><br><button type="button" class="btn btn-outline-primary me-2">Request a quote</button>
+                <button type="button" class="btn btn-primary">Learn more</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row text-center">
+          <!-- Each service item -->
+          <div class="col-md-3">
+            <div class="service-card p-3">
+             <!-- <div class="icon-bg">
+                <img src="find_icon.png" alt="Find">
+              </div>-->
+              <h4>Find</h4><br>
+              <p>We use data collected from POS, CRM, online ordering, and more to discover potential customers</p>
+              <br><br><a href="#" class="btn btn-primary">Learn more</a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="service-card p-3">
+             <!-- <div class="icon-bg">
+                <img src="understand_icon.png" alt="Understand">
+              </div>-->
+              <h4>Understand</h4><br>
+              <p>After discovering our potential consumers, we use A.i to find out why customers buy (age, gender, price motivation, quality of the meal, discount seekers, and more). </p>
+              <br><br><a href="#" class="btn btn-primary">Learn more</a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="service-card p-3">
+             <!-- <div class="icon-bg">
+                <img src="engage_icon.png" alt="Engage">
+              </div>-->
+              <h4>Engage</h4><br>
+              <p>We use the information collected to reach audiences via marketing, media, and advertising across various channels such as:<br><br><br>
+
+                ● Social Media<br>
+                ● Web-Based Ads<br>
+                ● TV, Radio, Digital Signage</p>
+                <br><br><a href="#" class="btn btn-primary">Learn more</a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="service-card p-3">
+             <!-- <div class="icon-bg">
+                <img src="measurement_icon.png" alt="Measurement">
+              </div>-->
+              <h4>Closed Loop Measurement</h4><br>
+              <p>We continue to optimize over time to provide each store with the best in class Customer acquisition cost, the highest return on Ad spend, menu level optimization, operational excellence, and more. </p>
+              <br><br><a href="#" class="btn btn-primary">Learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="row button-row">
+            <div class="col-md-12">
+                <br><br><br><button type="button" class="btn btn-outline-primary me-2">What is Querencia A.i</button>
+                <button type="button" class="btn btn-primary">What is Restaurant Media Network™</button>
+            </div>
+        </div>
+      </div>
+
+      <div class="container py-5">
+        <h1 class="text-center mb-5" style="font-family: Montserrat;"><b>The Smartest Brands and Operators Work with CX.i</b></h1>
+        <div class="row">
+            <!-- Independent Emerging Restaurants -->
+            <div class="col-md-4 mb-4">
+                <div class="info-section">
+                    <img src="ier.png" alt="Independent Restaurants" class="icon">
+                    <h2 class="info-title">Independent Emerging Restaurants</h2><br>
+                    <p class="info-text">
+                        Rather a single unit cafe/bar just starting out your journey or a long standing independent restaurant,
+                        CX.i provides a white glove support via the platform to help you navigate your next stage of growth.
+                    </p>
+                </div>
+            </div>
+            <!-- Middle Market Chains -->
+            <div class="col-md-4 mb-4">
+                <div class="info-section">
+                    <img src="mmc.png" alt="Middle Market Chains" class="icon">
+                    <h2 class="info-title">Middle Market Chains</h2><br>
+                    <p class="info-text">
+                        Leverage CX.i to support your continual growth with a scalable solution. Working with both corporate and/or
+                        franchisees. Controls for all team members in any role, dedicated support and reporting.
+                    </p>
+                </div>
+            </div>
+            <!-- Enterprise Brands -->
+            <div class="col-md-4 mb-4">
+                <div class="info-section">
+                    <img src="eb.png" alt="Enterprise Brands" class="icon">
+                    <h2 class="info-title">Enterprise Brands</h2><br>
+                    <p class="info-text">
+                        For Enterprise restaurants CX.i provides white glove support to capture share of wallet, optimize
+                        marketing and advertising spend, and automate growth at the store level.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+<div class="container-2">
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="independent-tab" data-bs-toggle="tab" href="#independent" role="tab" aria-controls="independent" aria-selected="true">Independent Restaurants</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="emerging-tab" data-bs-toggle="tab" href="#emerging" role="tab" aria-controls="emerging" aria-selected="false">Emerging Chains</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="enterprise-tab" data-bs-toggle="tab" href="#enterprise" role="tab" aria-controls="enterprise" aria-selected="false">Enterprise Brands</a>
+    </li>
+  </ul>
+  
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="independent" role="tabpanel" aria-labelledby="independent-tab">
+      <!-- Images for Independent Restaurants -->
+      <img src="SluttyVegan.png" alt="Slutty Vegan" class="img-fluid">
+      <img src="boaz.png" alt="Ready Set Coffee" class="img-fluid">
+      <img src="chillN.png" alt="Ready Set Coffee" class="img-fluid">
+      <img src="toasted.png" alt="Ready Set Coffee" class="img-fluid">
+      <img src="mrchicken.png" alt="Ready Set Coffee" class="img-fluid">
+      <img src="coffee.webp" alt="Ready Set Coffee" class="img-fluid">
+      <img src="Aladdins.png" alt="Ready Set Coffee" class="img-fluid">
+      <img src="breadless.png" alt="Ready Set Coffee" class="img-fluid">
+      <img src="flour.png" alt="Ready Set Coffee" class="img-fluid">
+      <img src="stickys.png" alt="Ready Set Coffee" class="img-fluid">
+      <!-- Additional logos -->
+    </div>
+    <div class="tab-pane fade" id="emerging" role="tabpanel" aria-labelledby="emerging-tab">
+      <!-- Images for Emerging Chains -->
+      <img src="wings.png" alt="Boaz" class="img-fluid">
+      <img src="kebab.png" alt="Toasted" class="img-fluid">
+      <img src="justsalad.png" alt="Toasted" class="img-fluid">
+      <img src="tazikis.png" alt="Toasted" class="img-fluid">
+      <img src="dig.png" alt="Toasted" class="img-fluid">
+      <img src="postino.png" alt="Toasted" class="img-fluid">
+      <img src="flattop.png" alt="Toasted" class="img-fluid">
+      <img src="Pjscoffee.jfif" alt="Toasted" class="img-fluid">
+      <img src="bigchicken.png" alt="Toasted" class="img-fluid">
+      <img src="miguels.png" alt="Toasted" class="img-fluid">
+
+    
+    </div>
+    <div class="tab-pane fade" id="enterprise" role="tabpanel" aria-labelledby="enterprise-tab">
+      <!-- Images for Enterprise Brands -->
+      <img src="carlsjr.png" alt="Dig" class="img-fluid">
+      <img src="hardees.png" alt="Zaxby's" class="img-fluid">
+      <img src="jamba.png" alt="Zaxby's" class="img-fluid">
+      <img src="zaxbys.png" alt="Zaxby's" class="img-fluid">
+      <img src="illy.png" alt="Zaxby's" class="img-fluid">
+      <!-- Additional logos -->
+    </div>
+  </div>
+
+</div> 
+
+    <footer class="bg text-white pt-4 pb-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <img src="CXI_logo_footer_white.png" alt="CustomerX.i" style="height: 50px;">
+                    <p class="text-muted mt-2" style="color: #fff;"><b>'The How behind the Chow'</b></p>
+                    <a href="https://linkedin.com" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://instagram.com" class="text-white"><i class="bi bi-instagram"></i></a>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <h5><b>Product</b></h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white"><b>Solutions</b></a></li>
+                        <li><a href="#" class="text-white"><b>Partners</b></a></li>
+                        <li><a href="#" class="text-white"><b>Pricing</b></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <h5><b>Company</b></h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white"><b>About us</b></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <h5><b>Support</b></h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white"><b>Help center</b></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <h5><b>Legal</b></h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white"><b>Terms & Conditions</b></a></li>
+                        <li><a href="#" class="text-white"><b>Privacy Policy</b></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

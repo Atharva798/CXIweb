@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<title>CustomerX.i</title>
+</head>
+<style>
+body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+.container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+.btn{
+
+            padding: 10px 20px;
+            background-color: #08213C;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-family: 'Montserrat', sans-serif;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 15px;
+    
+    
+
+}
+.navbar-brand{
+    margin-right: 40px;
+}
+.nav-item:last-child {
+        margin-right: 0; /* Removes margin on the last item */
+    }
+.navbar-nav {
+        margin-left: auto;
+    }
+
+.btn-primary {
+    background-color: #08213C; /* Primary color */
+    border: none;
+}
+.hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            margin: 20px 0; /* Added margin for better spacing */
+        }
+        .hero-text, .hero-image, .hero-image2 {
+            flex: 1;
+            margin-right: 20px; /* Space between text and image */
+        }
+        .hero h4.title, .hero h2.sub-title, .hero p {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero h4.title {
+            color: #4295CD;
+            font-size: 40px;
+            line-height: 1;
+            margin-bottom: 0;
+        }
+        .hero h2.sub-title {
+            color: #000;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-top: 0;
+        }
+
+        .hero p {
+            color: #000;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.5em;
+        }
+        .cta-button {
+            padding: 15px 30px;
+            background-color: #08213C;
+            color: white;
+            font-size: 1em;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .hero-image {
+            width: 50%; /* Adjust based on desired size */
+        }
+        .hero-image2{
+
+            width: 40%;
+        }
+        .trusted-brands h2, .awards h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logos, .awards-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures the logos wrap on smaller screens */
+}
+
+.logos img, .awards-logos img {
+    margin: 10px; /* Adds space around each logo */
+    height: 50px; /* Adjusts the height of logos uniformly */
+    width: auto; /* Maintains aspect ratio */
+}
+
+.awards-logos img {
+    height: 100px; /* Larger height for awards to stand out */
+}
+
+.features-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    font-size: 30px;
+}
+
+.features-section h2, .features-section p {
+    margin-bottom: 20px;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 300px; /* Adjust based on preference */
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.feature-card img {
+    height: 50px; /* Adjust size accordingly */
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    color: #333;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.feature-card p {
+    font-size: 18px;
+    color: #666;
+    font-family: 'Montserrat', sans-serif;
+}
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.left-section, .right-section {
+    flex: 1;
+}
+
+.dashboard-item {
+    width: 70%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+.accordion {
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.accordion-item h2 {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #4295CD;
+    color: white;
+    border: none;
+}
+
+.accordion-item.active .content, .accordion-item h2:hover + .content {
+    display: block;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.content {
+    display: none;
+    text-align: left;
+    border-top: 1px solid #eee;
+}
+.dashboard-container .left-section .image-1 img{
+                margin: 8px 0 0
+            }
+ .dashboard-container .left-section .image2 img{
+                margin: -16px 0 0
+            }
+
+.dashboard-container .left-section .image3 img{
+                margin: -20px 0 0
+            }
+
+ .dashboard-container .left-section .image4 {
+                margin: -16px 0 0;
+                padding: 0 2px 0 0
+            }
+
+.dashboard-container .left-section .image5 img{
+                align-content: flex-start;
+                align-items: flex-start
+            }
+
+ .dashboard-container .left-section .image5 img{
+                margin: -38px 0 0;
+                --e-column-margin-right: 0px;
+                --e-column-margin-left: 0px;
+                
+                padding: 20px 20px 0
+            }
+footer {
+    background-color: #4295CD;
+    font-family: 'Montserrat';
+    background: linear-gradient(to top, #4295CD 60%, #fff 190%);
+}
+
+
+</style>
+<body>
+    
+<nav class="navbar navbar-expand-lg navbar-light" style="width: 100%;" style="background-color: #DBE2EF;">
+  <div class="container-fluid" >
+    <a class="navbar-brand" href="#" style="color: #DBE2EF;"  >
+      <img src="LOGO.png" alt="CustomerX.i" style="height: 50px; margin-left: 180px;" >                         
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav" style="margin-right: 10px;">
+      <ul class="navbar-nav" style="margin-right: 10px;" >
+        <li class="nav-item" style="margin-left: 100px;">
+          <a class="nav-link dropdown-toggle" aria-expanded="false" id="navbarDropdownMenuLink" href="#" role="button" data-bs-toggle="dropdown" style="color: #000;">How it Works</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">How CustomerXi Works With Agencies</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color: #000;">Why Customer X.i</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #000;">
+            Solutions
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="MenuLevelInsights.html">Menu-Level Insights (MLI™)</a></li>
+                <li><a class="dropdown-item" href="TotalMarketInsights.html">Total Market Insights (TMI™ )</a></li>
+                <li><a class="dropdown-item" href="CDI.html">Customer Demographic Insights (CDI™ )</a></li>
+                <li><a class="dropdown-item" href="CMI.html">Campaign Execution</a></li>
+                <li><a class="dropdown-item" href="ResMediaNet.html">Restaurant Media Network™</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color: #000;">Plans</a>
+        </li>
+        <li class="nav-item" style="margin-right: 5px;">
+          <a class="nav-link" href="#" style="color: #000;" >About Us</a>
+        </li>
+      </ul>
+    </div>
+    <form class="d-flex">
+      <button class="btn" style="background-color: #08213C; color: white; margin-right: 8px;"  type="submit">Get Started</button>
+      <button class="btn" style="background-color: #DBE2EF; color: #000; margin-right: 80px;" type="submit">My Account</button>
+    </form>
+  </div>
+</nav>
+<div class="container">
+<div class="hero">
+    <div class="hero-text">
+        <h4 class="title"><b>Advertiser's CDP for </b></h4>
+        <h2 class="sub-title"><b>Maximizing Advertising Outcomes</b></h2>
+        <p>
+            Customer Data Platform to <span style="color: #4295CD;">Connect & Optimize
+            Omnichannel Customer Journeys</span> Enabling higher ROAS & Scaled business results.
+        </p>
+        <button class="cta-button">Request a Demo</button>
+    </div>
+    <img src="rebid-customer-data-platform.png" alt="Interactive Graphic" class="hero-image">
+</div>
+<br></br><br></br>
+
+<div class="hero">
+    <img src="image2.png" alt="Interactive Graphic" class="hero-image2">
+
+    <div class="hero-text">
+        
+        <h4 class="title"><b>Already have a CDP?</b></h4>
+        <h2 class="sub-title"><b>Turn It Into An Advertiser's CDP</b></h2>
+        <p>
+            Enhance your CDP with our 
+            <a href="">
+                <span style="color: #4295CD;">Advertising data platform</span>
+            </a>
+            to get Ad to acquisition customer insights that drive 
+            <span style="color: #4295CD;">
+                higher ROAS &amp;Scaled business results.<br/>
+            </span>
+        </p>
+        <button class="cta-button">Watch Video</button>
+    </div>
+    
+</div>
+</header> <br></br>
+
+<!-- Trusted Brands Section 
+<div class="trusted-brands">
+<h2><b>Trusted by Top Brands Across the Globe</b></h2>
+<div class="logos">
+<img src="logo-vero-moda.png" alt="Vero Moda" />
+<img src="logo-jack-jones.png" alt="Jack & Jones" />
+<img src="logo-bestseller.png" alt="Bestseller" />
+<img src="logo-only.png" alt="Only" />
+<img src="logo-vw.png" alt="Volkswagen" />
+<img src="logo-nestle.png" alt="Nestlé" />
+<img src="logo-amazon-payments.png" alt="Amazon Payments" />
+</div>
+</div>
+-->
+<!-- Awards & Recognitions Section -->
+<div class="awards">
+<h2><b>Awards & Recognitions</b></h2>
+<div class="awards-logos">
+<img src="award-gold.png" alt="Gold Award" />
+<img src="award-silver.png" alt="Silver Award" />
+<img src="award-bronze.png" alt="Bronze Award" />
+<img src="award-third-place.png" alt="Third Place Award" />
+</div>
+</div>
+
+<div class="features-section">
+<h2><span style="color: #4295CD;"><b>Advertiser's CDP</span> built for scaling your <span style="color: #4295CD;">Ad Performance</span></h2>
+<p>See how we turn your <span style="color: #4295CD;">Advertising data</span> into Business Results</b></p>
+<div class="features-grid">
+<div class="feature-card">
+<img src="realtime.png" >
+<h3 style="color: #4295CD;"><b>Real-time and Unified Reporting</b></h3>
+<p>Uncover where your ad dollars are best spent with 20+ automated reports, CXO view and advance dashboards.</p>
+</div>
+<div class="feature-card">
+<img src="AIled.png" >
+<h3 style="color: #4295CD;"><b>AI Led Optimization & Insights</b></h3>
+<p>Maximize ROAS and efficiency with AI led media planning, smart ad optimization and predictive behavioural insights.</p>
+</div>
+<div class="feature-card">
+<img src="degree.png" >
+<h3 style="color: #4295CD;"><b>360 Degree View of Customer</b></h3>
+<p>Eliminate data silos with real time identity resolution and auto profile enrichment to deliver personalized experiences.</p>
+</div>
+<div class="feature-card">
+<img src="seg.png" >
+<h3 style="color: #4295CD;"><b>Segmentation & Omnichannel Activation</b></h3>
+<p>Build actionable user segments with ease, grouping users into real-time segments for omni channel activation through automated workflows.</p>
+</div>
+<div class="feature-card">
+<img src="multi.png" >
+<h3 style="color: #4295CD;"><b>Multi Touch Attribution</b></h3>
+<p>Collect, track and analyze each customer interaction with the brand and uncover the true value and ROAS of every marketing channel.</p>
+</div>
+<div class="feature-card">
+<img src="cookie.png" >
+<h3 style="color: #4295CD;"><b>Cookieless & First Party Data Solutions</b></h3>
+<p>Futureproof your advertising and marketing operations and achieve hyper-personalization and targeting with no compromise on ROAS.</p>
+</div>
+</div>
+</div>
+<div class="dashboard-container">
+<div class="left-section">
+<div class="`">
+<!-- Dashboard elements displayed as images -->
+<div class="image-1">
+<img src="Mediabrief.png" alt="Clicks Overview" class="dashboard-item">
+</div>
+<div class="image2">
+
+<img src="Flow-1.png" alt="Data Integration Flowchart" class="dashboard-item">
+
+</div>
+<div class="image3">
+<img src="Right_Bottom02-1.png" alt="Partner Selection" class="dashboard-item" >
+</div>
+<div class="image4">
+<img src="centre_top-1.png" alt="Customer Journey Steps" class="dashboard-item">
+</div>
+<div class="image5">
+<img src="4Right_top-1.png" alt="Budget vs Spend" class="dashboard-item">
+</div>
+<div class="image6">
+<img src="Integ.png" alt="Budget vs Spend" class="dashboard-item">
+</div>
+</div>
+</div>
+<div class="right-section">
+<h1><span style="color: #4295CD;"><b>CustomerX.i </span>is the single most powerful stack to lend muscle to your <span style="color: #4295CD;">Advertising & Marketing Intelligence</span></b></h1>
+<div class="accordion">
+<div class="accordion-item active">
+    <h2>Unify</h2>
+    <div class="content">
+        <p>Integrate all your data including website, mobile app, ad networks, and other platforms.</p>
+    </div>
+</div>
+<!-- Additional accordion items -->
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+
+
+    <footer class="bg text-white pt-4 pb-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <img src="CXI_logo_footer_white.png" alt="CustomerX.i" style="height: 50px;">
+                    <p class="text-muted mt-2" style="color: #fff;"><b>'The How behind the Chow'</b></p>
+                    <a href="https://linkedin.com" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://instagram.com" class="text-white"><i class="bi bi-instagram"></i></a>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <h5><b>Product</b></h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white"><b>Solutions</b></a></li>
+                        <li><a href="#" class="text-white"><b>Partners</b></a></li>
+                        <li><a href="#" class="text-white"><b>Pricing</b></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <h5><b>Company</b></h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white"><b>About us</b></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <h5><b>Support</b></h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white"><b>Help center</b></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <h5><b>Legal</b></h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white"><b>Terms & Conditions</b></a></li>
+                        <li><a href="#" class="text-white"><b>Privacy Policy</b></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

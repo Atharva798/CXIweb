@@ -1,0 +1,560 @@
+/*Navbar*/
+.btn{
+
+    padding: 10px 20px;
+    background-color: #08213C;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    }
+    .navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-size: 15px;
+    }
+    .navbar-brand{
+    margin-right: 40px;
+    }
+    .nav-item:last-child {
+    margin-right: 0; /* Removes margin on the last item */
+    }
+    .navbar-nav {
+    margin-left: auto;
+    }
+
+/*Footer*/
+footer {
+    background-color: #4295CD;
+    font-family: 'Montserrat';
+    background: linear-gradient(to top, #4295CD 60%, #fff 190%);
+}
+
+/*HomePage*/
+
+.container{   
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+
+}
+.container-2{
+max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+
+}
+.award-logo {
+    width: 150px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;}
+.award-text {
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    text-align: center;
+    display: block; /* Makes the element behave like a block, taking full width */
+    width: 100%;
+}
+.button-row {
+    text-align: center;
+    margin-top: 20px;
+}            
+.title{
+
+font-family: 'Montserrat';
+}
+.service-card {
+background: #f0f0f0;
+border-radius: 0px;
+padding: 20px;
+margin-bottom: 40px;
+transition: transform 0.3s;
+font-family: 'Montserrat';
+height: 500px;
+flex-direction: column;
+justify-content: space-between;
+box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+}
+.service-card h4{
+font-weight: bold;
+
+}
+.service-card:hover {
+transform: scale(1.05);
+}
+.icon-bg {
+background: white;
+border-radius: 50%;
+padding: 15px;
+margin-bottom: 15px;
+}
+.icon {
+    width: 100px; /* Adjust icon size */
+    height: auto;
+    margin-bottom: 20px;
+}
+.info-section {
+    padding: 20px;
+    
+    border-radius: 8px;
+    font-family: 'Montserrat';
+    
+    
+}
+.info-title {
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+}
+.info-text {
+    font-size: 15px;
+    font-family: 'Montserrat';
+}  
+.tab-content img {
+/* width: 50%;  Set the width to 100% of its container */
+height: 200px;
+width: 200px; /* Keep aspect ratio */
+margin-bottom: 20px; /* Space between images */
+margin-right: 28px;
+}
+.nav, .tab-content {
+font-family: 'Montserrat', sans-serif; 
+font-weight: bold;
+color: #08213C;
+}
+.logo-container {
+display: grid; /* Using grid layout */
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Creates a responsive grid */
+gap: 20px; /* Space between grid items */
+}
+
+/*ResMediaNet*/
+.media-network-header {
+    color: #08213C;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}   
+.media-network-header  p{
+
+margin-top: 30px;
+}      
+.center-image img {
+width: 1250px;  /* Adjusts the width to take the full container width */
+height: auto; /* Maintains the aspect ratio */
+display: block; /* Removes any extra space below the image */
+}
+
+.features-section img {
+width: 80px; /* Adjust size as needed */
+}
+.features-section h5, .features-section p {
+margin: auto; /* Centers the text below the image */
+}
+.features-section .col-md-3 {
+display: flex;
+flex-direction: column;
+align-items: center;
+color: #08213C; /* Aligns content vertically */
+}
+.mb-4{
+color: #08213C;
+margin-bottom: 100px;
+}
+
+.second-btn{
+margin-top: 80px;
+    
+color: white;
+text-decoration: none;
+border-radius: 20px;
+font-family: 'Montserrat', sans-serif;
+margin-bottom: 100px;
+}
+.btn1:hover .btn:hover{
+background-color: #1ADBC0;
+}
+.other-products-section img {
+width: 350px; /* Adjust size as needed */   
+margin: auto; /* Centers the image in the column */
+}
+.other-products-section h5 {
+color: #08213C; /* Primary color */
+margin-bottom: 30px;
+}
+.other-products-section p {
+color: #666; /* Dark gray for text */
+font-size: 14px;
+}
+.btn-primary {
+background-color: #08213C; /* Primary color */
+border: none;
+}
+
+/*contact-page*/
+
+.campaign-section {
+    display: flex;
+    height: 100vh; /* Takes full height of the viewport */
+    align-items: center; /* Centers the content vertically */
+    justify-content: space-evenly; /* Distributes space around items */
+    background-color: #4295CD; /* Dark background for the campaign */
+    color: #000; /* White text color */
+    padding: 0 150px; /* Padding on both sides */
+}
+
+.campaign-left {
+    flex: 1; /* Takes half of the available space */
+    font-size: 68px; /* Large font size for the text */
+    line-height: 1.2; /* Closer line height for better readability */
+    padding-right: 50px; /* Padding to separate from the form */
+    font-family: 'Montserrat';
+}
+
+.campaign-right {
+    flex: 1; /* Takes half of the available space */
+    background-color: #fff; /* White background for the form */
+    padding: 45px;  /* Padding inside the form */
+    border-radius: 10px; /* Rounded corners for the form */
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.5); /* Subtle shadow for depth */
+}
+
+.form-control {
+    margin-bottom: 20px; 
+}
+
+.btn-primary {
+    background-color: #08213C; /* Primary button color */
+    border: none; /* No border for the button */
+    width: 100%; /* Full width button */
+    padding: 10px; /* Padding inside the button */
+    border-radius: 20px; /* Rounded corners for the button */
+}
+
+/*How it works*/
+.hero-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    margin: 20px 0; /* Added margin for better spacing */
+}
+.hero-2
+{
+   
+    text-align: right;
+    margin: 20px 0;
+     /* Added margin for better spacing */
+}
+.cta-button{
+padding: 10px 20px;
+background-color: #08213C;
+color: white;
+text-decoration: none;
+border-radius: 20px;
+font-family: 'Montserrat', sans-serif;
+}        
+.title{
+
+font-family: 'Montserrat', sans-serif;
+color: #08213C;
+font-size: 26px;
+
+}
+.hero-text{
+
+font-family: 'Montserrat', sans-serif;
+font-size: 16px;
+}
+
+/*products*/
+
+.btn-primary {
+    background-color: #08213C; /* Primary color */
+    border: none;
+}
+.hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            margin: 20px 0; /* Added margin for better spacing */
+        }
+        .hero-text, .hero-image, .hero-image2 {
+            flex: 1;
+            margin-right: 20px; /* Space between text and image */
+        }
+        .hero h4.title, .hero h2.sub-title, .hero p {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero h4.title {
+            color: #4295CD;
+            font-size: 40px;
+            line-height: 1;
+            margin-bottom: 0;
+        }
+        .hero h2.sub-title {
+            color: #000;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-top: 0;
+        }
+
+        .hero p {
+            color: #000;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.5em;
+        }
+        .cta-button {
+            padding: 15px 30px;
+            background-color: #08213C;
+            color: white;
+            font-size: 1em;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .hero-image {
+            width: 50%; /* Adjust based on desired size */
+        }
+        .hero-image2{
+
+            width: 40%;
+        }
+        .trusted-brands h2, .awards h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logos, .awards-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures the logos wrap on smaller screens */
+}
+
+.logos img, .awards-logos img {
+    margin: 10px; /* Adds space around each logo */
+    height: 50px; /* Adjusts the height of logos uniformly */
+    width: auto; /* Maintains aspect ratio */
+}
+
+.awards-logos img {
+    height: 100px; /* Larger height for awards to stand out */
+}
+
+.features-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    font-size: 30px;
+}
+
+.features-section h2, .features-section p {
+    margin-bottom: 20px;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 300px; /* Adjust based on preference */
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.feature-card img {
+    height: 50px; /* Adjust size accordingly */
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    color: #333;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.feature-card p {
+    font-size: 18px;
+    color: #666;
+    font-family: 'Montserrat', sans-serif;
+}
+.dashboard-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.left-section, .right-section {
+    flex: 1;
+}
+
+.dashboard-item {
+    width: 70%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+.accordion {
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.accordion-item h2 {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #4295CD;
+    color: white;
+    border: none;
+}
+
+.accordion-item.active .content, .accordion-item h2:hover + .content {
+    display: block;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.content {
+    display: none;
+    text-align: left;
+    border-top: 1px solid #eee;
+}
+.dashboard-container .left-section .image-1 img{
+                margin: 8px 0 0
+            }
+ .dashboard-container .left-section .image2 img{
+                margin: -16px 0 0
+            }
+
+.dashboard-container .left-section .image3 img{
+                margin: -20px 0 0
+            }
+
+ .dashboard-container .left-section .image4 {
+                margin: -16px 0 0;
+                padding: 0 2px 0 0
+            }
+
+.dashboard-container .left-section .image5 img{
+                align-content: flex-start;
+                align-items: flex-start
+            }
+
+ .dashboard-container .left-section .image5 img{
+                margin: -38px 0 0;
+                --e-column-margin-right: 0px;
+                --e-column-margin-left: 0px;
+                
+                padding: 20px 20px 0
+            }
+
+/*MLI*/
+
+.header{
+
+    color: #08213C;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 40px;
+            margin-bottom: 20px;
+}
+
+
+.btn-primary {
+    background-color: #08213C; /* Primary color */
+    border: none;
+}
+.MLI-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    margin: 20px 0; /* Added margin for better spacing */
+}
+.MLI-hero-text, .MLI-hero-image2 {
+    flex: 1;
+    margin-right: 20px;
+    width: 55%;
+    margin-left: 50px;
+}
+.MLI-features-section img {
+width: 80px; /* Adjust size as needed */
+}
+.MLI-features-section h5, .MLI-features-section p {
+margin: auto; /* Centers the text below the image */
+}
+.MLI-features-section .col-md-3 {
+display: flex;
+flex-direction: column;
+align-items: center;
+color: #08213C; /* Aligns content vertically */
+font-family: 'Montserrat';
+margin-bottom: 150px;
+}
+.mb-4{
+color: #08213C;
+margin-bottom: 100px;
+font-family: 'Montserrat';
+}
+.MLI-center-image img {
+width: 1250px;  /* Adjusts the width to take the full container width */
+height: auto; /* Maintains the aspect ratio */
+display: block; /* Removes any extra space below the image */
+}
+
+.MLI-services-section {
+display: flex;
+justify-content: center;
+padding: 20px;
+}
+.MLI-service {
+background: white;
+margin: 10px;
+padding: 20px;
+width: 300px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.MLI-service h3 {
+margin-top: 20px;
+color: #333;
+}
+.MLI-service p {
+color: #666;
+font-size: 14px;
+}
+.MLI-service a {
+text-decoration: none;
+color: #4285F4;
+font-size: 14px;
+}
+.MLI-icon {
+height: 64px;
+margin: 20px auto;
+}
+
+/*Products*/
+
