@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<title>My Account</title>
+</head>
+<style>
+ body{
+        font-family: 'Montserrat';
+ }   
+.container{
+
+   
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+    
+}
+.container-2{
+    max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+
+}
+.navbar {
+    width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 50px; /* Adjusted padding for equal margins */
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        font-size: 15px;
+        position: fixed;
+        background-color: white;
+}
+
+
+.navbar-brand {
+    margin-right: 40px;
+}
+
+.nav-item:last-child {
+    margin-right: 0; /* Removes margin on the last item */
+}
+
+.navbar-nav {
+    margin-left: auto;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #08213C;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.dropdown-menu {
+    position: absolute;
+    left: auto;
+    right: auto;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.platform-overview {
+    background: linear-gradient(135deg, #4295CD, #1E6FA3, #83B3E5);
+    color: #fff;
+    padding: 150px 0;
+}
+
+.overview-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overview-left, .overview-right {
+    width: 45%;
+}
+
+.overview-left h2, .overview-right h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.explore-section {
+    padding: 60px 0;
+    background-color: white;
+    margin-bottom: 0px;
+}
+
+.explore-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.explore-section p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.product-section {
+    padding: 50px 0;
+    background-color: white; /* Light background color */
+}
+
+.product-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.product-card h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.product-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.product-card .btn {
+   
+    padding: 10px 20px;
+    background-color: #08213C;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.product-card .btn:hover {
+    background-color: #4295CD;
+}
+.button-row {
+            text-align: center;
+            margin-top: 20px;
+        } 
+        .faq-section {
+    padding: 50px 0;
+    background-color: white; /* Light background color */
+}
+
+.faq-section h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.faq-item h3 {
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-content {
+    display: none;
+    margin-top: 10px;
+}
+
+.faq-toggle {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.contact-section {
+    padding: 30px 0;
+}
+
+.contact-section .btn {
+    padding: 10px 20px;
+    background-color: #08213C;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-section .btn:hover {
+    background-color: #4295CD;
+}
+
+
+footer {
+    background: linear-gradient(135deg, #4295CD, #1E6FA3, #83B3E5);
+    font-family: 'Montserrat';
+    background: linear-gradient(to top, #4295CD 60%, #fff 190%);
+}
+
+</style>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+              <img src="LOGO.png" alt="CustomerX.i" style="height: 50px;margin-left: 80px;">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto">
+                  <li class="nav-item dropdown" style="margin-left: 20px;">
+                      <a class="nav-link dropdown-toggle" aria-expanded="false" id="navbarDropdownMenuLink" href="#" role="button" data-bs-toggle="dropdown" style="color: #000;">How it Works</a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="HowItWorks.html">How CustomerX.i Works With Agencies</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="whycxi.html" style="color: #000;">Why CustomerX.i</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #000;">Solutions</a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="MenuLevelInsights.html">Menu-Level Insights (MLI™)</a></li>
+                          <li><a class="dropdown-item" href="TotalMarketInsights.html">Total Market Insights (TMI™)</a></li>
+                          <li><a class="dropdown-item" href="CDI.html">Customer Demographic Insights (CDI™)</a></li>
+                          <li><a class="dropdown-item" href="CMI.html">Campaign Management Insights (CMI™)</a></li>
+                          <li><a class="dropdown-item" href="Products.html">Products</a></li>
+                          <li><a class="dropdown-item" href="ResMediaNet.html">Restaurant Media Network™</a></li>
+                          <li><a class="dropdown-item" href="QuerenciaAi.html">Querencia AI</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="PricingPlans.html" style="color: #000;">Pricing</a>
+                </li>
+                <li class="nav-item" style="margin-right: 5px;">
+                    <a class="nav-link" href="AboutUs.html" style="color: #000;">About Us</a>
+                </li>
+            </ul>
+        </div>
+        <form class="d-flex">
+            <a class="btn"  href="contact-page.html" style="background-color: #08213C; color: white; margin-right: 8px;" type="submit">Contact Us</a>
+            <a class="btn" href="Myaccount.html" style="background-color: #DBE2EF; color: #000; margin-right: 80px;" type="submit">My Account</a>
+        </form>
+      </div>
+  </nav>
+
+  <div class="platform-overview">
+    <div class="container">
+        <div class="overview-row">
+            <div class="overview-left">
+                <h2>Platform Overview</h2>
+            </div>
+            <div class="overview-right">
+                <h2>Increase your first-party data and maximize revenue</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="explore-section">
+    <div class="container text-center">
+        <h2 style="margin-bottom: 60px;">Explore CX.i AI Engine</h2>
+        <p>Querencia: translated means "Favorite Place". And with our AI engine that is exactly what we harness the power to create for each of our restaurant brands at every single one of their locations. Creating a favorite place for their guest.</p>
+        <p>Align marketing, operations, and front-line<br>We deliver services that support small emerging to large enterprise restaurants</p>
+    </div>
+</div>
+
+<div class="container product-section">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="product-card">
+                <img src="TMI-image1.0.jpg" alt="Market Insights" class="img-fluid">
+                <h4>TOTAL MARKET INSIGHTS (TMI™)</h4>
+                <p>CustomerX.i helps stores see how they rank locally and compare to their competitors in the market.<br> With our innovative technology, we are able to narrow down your competitors by cuisine. <br>Your store will be able to compare factors such as sales, foot traffic, demographics, and more!</p>
+                <a href="TotalMarketInsights.html" class="btn btn-primary">Learn more</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="product-card">
+                <img src="CDI-image1.png" alt="Demographic Insights" class="img-fluid">
+                <h4>CUSTOMER DEMOGRAPHIC INSIGHTS (CDI™)</h4>
+                <p>This solution is designed to graph your store's syndicated audiences. We use this information to understand and analyze how far existing customers are willing to travel to visit your store. We also use this information to help find potential customers in your area.</p>
+                <a href="CDI.html" class="btn btn-primary">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="product-card">
+                <img src="MLI-image1.png" alt="Market Insights" class="img-fluid">
+                <h4>MENU-LEVEL INSIGHTS (MLI™ )</h4>
+                
+                <p>MLI™ dashboards are configurable allowing restaurant operators and marketing teams to compare store performance and guest needs, as well as being able to break down menu items and their direct impact on guests. Some features include:</p>
+                <ul>
+                    <li>Menu level buys tied to guests' demographics.</li>
+                    <li>Day part breakdown of menu item performance. (MoM/YoY)</li>
+                    <li>LTOs compared to guests' demographics vs other menu items.</li>
+                    <li>Menu items tied to pricing, location, and more!</li>
+                </ul>  
+                <a href="MenuLevelInsights.html" class="btn btn-primary">Learn more</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="product-card">
+                <img src="que-tmi.png" alt="Demographic Insights" class="img-fluid">
+                <h4>QUERENCIA AI</h4>
+                <p>Querencia AI is the future of every restaurant that is currently or planning to serve a guest. It is the ability to optimize your marketing, make the best decisions and recommendations, and more to drive the highest revenue on a store-by-store basis</p>
+                <a href="QuerenciaAi.html" class="btn btn-primary">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <div class="container product-section">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="product-card">
+                    <img src="campaign-execution.png" alt="Market Insights" class="img-fluid">
+                    <h4>Campaign Execution and Measurement</h4>
+                    <p>Campaign Management Insights (CMI™) helps operators and marketing teams engage their guests and measure the results. With this tool, stores are able to retain, regain and convert guests based on targeted audience strategy. Stores can also leverage their AI to automate their marketing campaigns.
+
+                        This tool enables action on your brand's data and insights.</p>
+                        <a href="CMI.html" class="btn btn-primary">Learn more</a>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+<div class="row button-row" >
+    <div class="col-md-12" style="margin-bottom: 100px;">
+        <br><br><a type="button" href="PricingPlans.html" class="btn btn-outline-primary me-2">Pricing</a>
+        <a type="button" href="contact-page.html" class="btn btn-primary">Try it for Free!</a>
+    </div>
+</div>
+<div class="faq-section">
+    <div class="container">
+        <h2 class="text-center">FAQ</h2>
+        <div class="faq-item">
+            <h3>How can I make the order? <span class="faq-toggle">+</span></h3>
+            <div class="faq-content">
+                <p>Click Order button next to the service you want to purchase and leave your contacts in a follow-up form. We will get in touch with you shortly to clarify all the details.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3>What if I don’t know what plan I need? <span class="faq-toggle">+</span></h3>
+            <div class="faq-content">
+                <p>Click Order button next to the service you want to purchase and leave your contacts in a follow-up form. We will get in touch with you shortly to clarify all the details.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3>What payment options do you provide for clients? <span class="faq-toggle">+</span></h3>
+            <div class="faq-content">
+                <p>Click Order button next to the service you want to purchase and leave your contacts in a follow-up form. We will get in touch with you shortly to clarify all the details.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3>Do you have a money back guarantee? <span class="faq-toggle">+</span></h3>
+            <div class="faq-content">
+                <p>Click Order button next to the service you want to purchase and leave your contacts in a follow-up form. We will get in touch with you shortly to clarify all the details.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3>How can I change my plan? <span class="faq-toggle">+</span></h3>
+            <div class="faq-content">
+                <p>Click Order button next to the service you want to purchase and leave your contacts in a follow-up form. We will get in touch with you shortly to clarify all the details.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3>Can I get video consultation with your specialist? <span class="faq-toggle">+</span></h3>
+            <div class="faq-content">
+                <p>Click Order button next to the service you want to purchase and leave your contacts in a follow-up form. We will get in touch with you shortly to clarify all the details.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="contact-section text-center">
+    <p style="font-size: 20px;">Have a different question?</p>
+    <a href="contact-page.html" class="btn btn-primary">Contact Us</a>
+</div>
+
+</div>
+  <footer class="bg text-white pt-4 pb-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <img src="CXI_logo_footer_white.png" alt="CustomerX.i" style="height: 50px;">
+                <p class="text-muted mt-2" style="color: #fff;"><b>'The How behind the Chow'</b></p>
+                <a href="https://linkedin.com" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+                <a href="https://instagram.com" class="text-white"><i class="bi bi-instagram"></i></a>
+            </div>
+            <div class="col-md-2 mb-3">
+                <h5><b>Product</b></h5>
+                <ul class="list-unstyled">
+                    <li><a href="ResMediaNet.html" class="text-white"><b>Solutions</b></a></li>
+                    <li><a href="Partners.html" class="text-white"><b>Partners</b></a></li>
+                    <li><a href="PricingPlans.html" class="text-white"><b>Pricing</b></a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 mb-3">
+                <h5><b>Company</b></h5>
+                <ul class="list-unstyled">
+                    <li><a href="AboutUs.html" class="text-white"><b>About us</b></a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 mb-3">
+                <h5><b>Support</b></h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white"><b>Help center</b></a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 mb-3">
+                <h5><b>Legal</b></h5>
+                <ul class="list-unstyled">
+                    <li><a href="TandC.html" class="text-white"><b>Terms & Conditions</b></a></li>
+                    <li><a href="PrivacyPolicy.html" class="text-white"><b>Privacy Policy</b></a></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>$(document).ready(function() {
+    $('.faq-toggle').click(function() {
+        var content = $(this).parent().next('.faq-content');
+        if (content.is(':visible')) {
+            content.slideUp();
+            $(this).text('+');
+        } else {
+            content.slideDown();
+            $(this).text('-');
+        }
+    });
+});
+</script>
+</body>
+</html>
