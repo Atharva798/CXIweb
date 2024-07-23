@@ -26,6 +26,7 @@ justify-content: center;
         position: fixed;
         background-color: white;
         top: 0%;
+        z-index: 10;
 }
 
 .navbar-brand {
@@ -54,6 +55,49 @@ justify-content: center;
     left: auto;
     right: auto;
 }
+.img-slider {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    overflow: hidden;
+  }
+
+  .img-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .img-slider__before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .img-slider__handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 5px;
+    background: #ffffff;
+    cursor: ew-resize;
+    z-index: 2;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .img-slider__input {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 100%;
+    max-width: 400px;
+    transform: translateX(-50%);
+  }
+
 .hero-1 {
             display: flex;
             justify-content: space-between;
@@ -117,7 +161,10 @@ footer {
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #000;">Solutions</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                           <li><a class="dropdown-item" href="CXIPlatform.html">CustomerX.i Platform</a></li>
+                            <li><a class="dropdown-item" href="MenuLevelInsights.html">Menu-Level Insights (MLI™)</a></li>
+                            <li><a class="dropdown-item" href="TotalMarketInsights.html">Total Market Insights (TMI™)</a></li>
+                            <li><a class="dropdown-item" href="CDI.html">Customer Demographic Insights (CDI™)</a></li>
+                            <li><a class="dropdown-item" href="CMI.html">Campaign Management Insights (CMI™)</a></li>
                             <li><a class="dropdown-item" href="Products.html">Advertising CDP</a></li>
                             <li><a class="dropdown-item" href="ResMediaNet.html">Restaurant Media Network™</a></li>
                             <li><a class="dropdown-item" href="UPConnect.html">UPConnect and Consumer Packaged Goods (CPG)</a></li>
@@ -143,10 +190,17 @@ footer {
     <div class="container">
     <h1 class="title" style="font-size: 68px; margin-top: 180px; margin-left: 70px; font-family: Montserrat; font-weight: bold;">How it <span style="color: #4295CD;">Works</span></h1>
     <p class="sub-title" style="font-size: 18px; margin-top: 30px; margin-left: 70px; font-family: Montserrat;">Connecting your brand to the customers ready to buy convert and engage</p>
-    <h2 class="heading-1" style="font-size: 42px; margin-top: 150px; margin-left: 50px; font-family: Montserrat; font-weight: bold; text-align: center;color: #08213C;">Simplicity on the other side of Complexity <br>with CustomerX.i</h2>
-    <video width="1200px" controls autoplay loop muted style="margin-left: 50px;">
-    <source src="03SliderAnim_Final_1_21_yt1080fullHD.mp4" type="video/mp4">
-    </video>
+    <h2 class="heading-1" style="font-size: 42px; margin-top: 150px; margin-left: 50px; font-family: Montserrat; font-weight: bold; text-align: center;color: #08213C;">Marketing Strategy Before and After Customer X.i</h2><br><br>
+    <div class="img-slider" id="imgSlider">
+        <div class="img-slider__before" id="imgSliderBefore">
+          <img src="slider1.png" alt="Before Image">
+        </div>
+        <img src="slider2.png" alt="After Image">
+        <div class="img-slider__handle" id="imgSliderHandle"></div>
+        <input type="range" min="0" max="100" value="50" class="img-slider__input" id="imgSliderInput">
+      </div>
+    </div>
+    
     <h4 class="heading-1" style="font-size: 16px; margin-top: 60px; margin-left: 50px; font-family: Montserrat; font-weight: bold; text-align: center;">Use CX.i to tie online and in-store purchase data into harmonized customer profiles, offer<br> management programs, media advertising, and more.</h2>
     <h2 class="heading-1" style="font-size: 32px; margin-top: 100px; margin-left: 50px; font-family: Montserrat; font-weight: bold; text-align: center;">Deep demographics, ability to take real-time action on your insights and data.Transform your insights into revenue.</h2>
     <h2 class="heading-1" style="font-size: 42px; margin-top: 100px; margin-left: 50px; font-family: Montserrat; font-weight: bold; text-align: center;color: #08213C;">Our Process</h2>
@@ -294,5 +348,26 @@ footer {
     
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const slider = document.getElementById('imgSliderInput');
+      const before = document.getElementById('imgSliderBefore');
+      const handle = document.getElementById('imgSliderHandle');
+      const imgSlider = document.getElementById('imgSlider');
+  
+      function updateSlider() {
+        const value = slider.value;
+        const width = imgSlider.offsetWidth;
+        const handlePos = (width * value) / 100;
+        before.style.width = `${value}%`;
+        handle.style.left = `${handlePos}px`;
+      }
+  
+      slider.addEventListener('input', updateSlider);
+      window.addEventListener('resize', updateSlider);  // Update position on window resize
+      updateSlider();  // Initialize the slider position on load
+    });
+  </script>
+  
 </body>
 </html>
