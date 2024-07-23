@@ -186,6 +186,65 @@ footer {
     font-family: 'Montserrat';
     background: linear-gradient(135deg, #4295CD, #1E6FA3, #83B3E5);
 }
+@media (max-width: 768px) {
+        .navbar {
+            padding: 10px 20px;
+        }
+
+        .title, .info-title, .service-card h4, .btn {
+            font-size: 16px;
+        }
+
+        .info-text, .award-text, .service-card p {
+            font-size: 14px;
+        }
+
+        .container, .container-2 {
+            padding: 10px;
+        }
+
+        .button-row .btn {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .service-card {
+            height: auto;
+        }
+
+        .award-logo {
+            margin-left: 0;
+            margin-bottom: 20px;
+        }
+
+        .row > [class*='col-'] {
+            margin-bottom: 20px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .navbar-brand img {
+            height: 40px;
+            margin-left: 0;
+        }
+
+        .navbar {
+            flex-direction: column;
+        }
+
+        .navbar-nav {
+            margin-left: 0;
+        }
+
+        .btn {
+            padding: 8px 16px;
+        }
+
+        .service-card {
+            padding: 15px;
+        }
+    }
 
 </style>
 
