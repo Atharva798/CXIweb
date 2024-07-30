@@ -130,6 +130,130 @@ footer {
     font-family: 'Montserrat';
     background: linear-gradient(to top, #4295CD 60%, #fff 190%);
 }
+    /* Responsive typography */
+h1 {
+    font-size: 2.5rem; /* Default size */
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .navbar-brand img {
+        margin-left: 0;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .award-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .service-card {
+        height: auto;
+    }
+
+    h1, h2, h3, h4, p {
+        font-size: 1rem; /* Reduce font size for smaller screens */
+    }
+
+    .key-feature {
+        padding: 5px;
+    }
+
+    /* Adjust video width */
+    video {
+        width: 100%;
+    }
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        margin-bottom: 10px;
+    }
+
+    .service-card, .info-section {
+        margin-bottom: 20px;
+    }
+
+    /* Adjust image size and margin */
+    .img-fluid {
+        max-width: 90%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2, h3, h4 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .container, .container-2 {
+        padding: 10px;
+    }
+
+    .footer .container {
+        text-align: center;
+    }
+
+    .footer .col-md-2, .footer .col-md-4 {
+        margin-bottom: 20px;
+    }
+}
+
 </style>
 
 <body>
