@@ -57,11 +57,14 @@ justify-content: center;
     left: auto;
     right: auto;
 }
-.img-slider {
+
+  .img-slider {
     position: relative;
     width: 100%;
     height: 500px; /* Adjust height as needed */
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   .img-slider img {
@@ -89,6 +92,7 @@ justify-content: center;
     cursor: ew-resize;
     z-index: 2;
     transition: left 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
   .img-slider__input {
@@ -98,8 +102,32 @@ justify-content: center;
     width: 100%;
     max-width: 400px;
     transform: translateX(-50%);
+    z-index: 3;
   }
 
+  .img-slider__input::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    background: #4295CD;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .img-slider__input::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #4295CD;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .img-slider__input::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: #4295CD;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 .hero-1 {
             display: flex;
             justify-content: space-between;
@@ -190,14 +218,14 @@ footer {
     <h1 class="title" style="font-size: 68px; margin-top: 180px; margin-left: 70px; font-family: Montserrat; font-weight: bold;">How it <span style="color: #4295CD;">Works</span></h1>
     <p class="sub-title" style="font-size: 18px; margin-top: 30px; margin-left: 70px; font-family: Montserrat;">Connecting your brand to the customers ready to buy convert and engage</p>
    <h2 class="heading-1" style="font-size: 42px; margin-top: 150px; margin-left: 50px; font-family: Montserrat; font-weight: bold; text-align: center;color: #08213C;">Marketing Strategy Before and After Customer X.i</h2><br><br>
-    <div class="img-slider" id="imgSlider">
-        <div class="img-slider__before" id="imgSliderBefore">
-          <img src="slider1.png" alt="Before Image">
-        </div>
-        <img src="slider2.png" alt="After Image">
-        <div class="img-slider__handle" id="imgSliderHandle"></div>
-        <input type="range" min="0" max="100" value="50" class="img-slider__input" id="imgSliderInput">
+  <div class="img-slider" id="imgSlider">
+    <div class="img-slider__before" id="imgSliderBefore">
+      <img src="slider1.png" alt="Before Image">
     </div>
+    <img src="slider2.png" alt="After Image">
+    <div class="img-slider__handle" id="imgSliderHandle"></div>
+    <input type="range" min="0" max="100" value="50" class="img-slider__input" id="imgSliderInput">
+  </div>
 
     <h4 class="heading-1" style="font-size: 16px; margin-top: 60px; margin-left: 50px; font-family: Montserrat; font-weight: bold; text-align: center;">Use CX.i to tie online and in-store purchase data into harmonized customer profiles, offer<br> management programs, media advertising, and more.</h2>
     <h2 class="heading-1" style="font-size: 32px; margin-top: 100px; margin-left: 50px; font-family: Montserrat; font-weight: bold; text-align: center;">Deep demographics, ability to take real-time action on your insights and data.Transform your insights into revenue.</h2>
@@ -324,24 +352,24 @@ footer {
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const slider = document.getElementById('imgSliderInput');
-      const before = document.getElementById('imgSliderBefore');
-      const handle = document.getElementById('imgSliderHandle');
-      const imgSlider = document.getElementById('imgSlider');
-  
-      function updateSlider() {
-        const value = slider.value;
-        const width = imgSlider.offsetWidth;
-        const handlePos = (width * value) / 100;
-        before.style.width = `${value}%`;
-        handle.style.left = `${handlePos}px`;
-      }
-  
-      slider.addEventListener('input', updateSlider);
-      window.addEventListener('resize', updateSlider);  // Update position on window resize
-      updateSlider();  // Initialize the slider position on load
-    });
+  document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.getElementById('imgSliderInput');
+    const before = document.getElementById('imgSliderBefore');
+    const handle = document.getElementById('imgSliderHandle');
+    const imgSlider = document.getElementById('imgSlider');
+
+    function updateSlider() {
+      const value = slider.value;
+      const width = imgSlider.offsetWidth;
+      const handlePos = (width * value) / 100;
+      before.style.width = `${value}%`;
+      handle.style.left = `${handlePos}px`;
+    }
+
+    slider.addEventListener('input', updateSlider);
+    window.addEventListener('resize', updateSlider);  // Update position on window resize
+    updateSlider();  // Initialize the slider position on load
+  });
   </script>
   
 </body>
